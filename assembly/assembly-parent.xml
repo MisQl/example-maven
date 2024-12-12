@@ -8,8 +8,18 @@
     <includeBaseDirectory>false</includeBaseDirectory>
     <files>
         <file>
-            <source>${project.basedir}/maven-submodule-1/target/maven-submodule-1.jar</source>
+<!--            <source>${project.basedir}/maven-submodule-1/target/maven-submodule-1.jar</source>-->
+            <source>${project.basedir}/target/maven-submodule-1.jar</source>
             <outputDirectory>./</outputDirectory>
         </file>
     </files>
+<!--    <dependencySets>-->
+<!--        <dependencySet>-->
+<!--            <outputDirectory>artifacts</outputDirectory>-->
+<!--            <includes>-->
+<!--                <include>pl.paukszto:example-maven:jar</include>-->
+<!--            </includes>-->
+<!--            <unpack>false</unpack>-->
+<!--        </dependencySet>-->
+<!--    </dependencySets>-->
 </assembly>
