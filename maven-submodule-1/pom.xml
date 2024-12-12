@@ -7,7 +7,7 @@
     <parent>
         <groupId>pl.paukszto</groupId>
         <artifactId>example-maven</artifactId>
-        <version>1.0-0-SNAPSHOT</version>
+        <version>6.0-0-SNAPSHOT</version>
     </parent>
 
     <artifactId>maven-submodule-1</artifactId>

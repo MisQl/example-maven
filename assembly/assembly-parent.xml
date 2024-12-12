@@ -6,20 +6,23 @@
         <format>zip</format>
     </formats>
     <includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <fileSet>
+            <directory>${project.basedir}/maven-submodule-1/target</directory>
+            <outputDirectory>./</outputDirectory>
+            <includes>
+                <include>maven-submodule-1.jar</include>
+            </includes>
+        </fileSet>
+
+    </fileSets>
     <files>
         <file>
+            <source>${project.basedir}/pom.xml</source>
 <!--            <source>${project.basedir}/maven-submodule-1/target/maven-submodule-1.jar</source>-->
-            <source>${project.basedir}/target/maven-submodule-1.jar</source>
-            <outputDirectory>./</outputDirectory>
+<!--            <source>${project.basedir}/target/maven-submodule-1.jar</source>-->
+<!--            <source>${project.basedir}/target/maven-submodule-1-6.0-0-SNAPSHOT.jar</source>-->
+<!--            <outputDirectory>./</outputDirectory>-->
         </file>
     </files>
-<!--    <dependencySets>-->
-<!--        <dependencySet>-->
-<!--            <outputDirectory>artifacts</outputDirectory>-->
-<!--            <includes>-->
-<!--                <include>pl.paukszto:example-maven:jar</include>-->
-<!--            </includes>-->
-<!--            <unpack>false</unpack>-->
-<!--        </dependencySet>-->
-<!--    </dependencySets>-->
 </assembly>
