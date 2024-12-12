@@ -12,7 +12,6 @@
 
     <modules>
         <module>maven-submodule-1</module>
-        <module>maven-assembly</module>
     </modules>
 
     <properties>
