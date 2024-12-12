@@ -7,6 +7,7 @@
     <groupId>pl.paukszto</groupId>
     <artifactId>example-maven</artifactId>
     <version>1.0-0-SNAPSHOT</version>
+
     <packaging>pom</packaging>
 
     <modules>
@@ -31,6 +32,16 @@
         </snapshotRepository>
     </distributionManagement>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>pl.paukszto</groupId>
+                <artifactId>maven-submodule-1</artifactId>
+                <version>1.0-0-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <build>
         <plugins>
 <!--            <plugin>-->
@@ -41,7 +52,7 @@
 <!--                <executions>-->
 <!--                    <execution>-->
 <!--                        <id>assembly-package</id>-->
-<!--                        <phase>deploy</phase>-->
+<!--                        <phase>install</phase>-->
 <!--                        <goals>-->
 <!--                            <goal>single</goal>-->
 <!--                        </goals>-->
@@ -55,12 +66,34 @@
 <!--                    </execution>-->
 <!--                </executions>-->
 <!--            </plugin>-->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <version>2.8.2</version>
-                <inherited>false</inherited>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-deploy-plugin</artifactId>-->
+<!--                <version>2.8.2</version>-->
+<!--            </plugin>-->
+<!--            <plugin>-->
+<!--                <groupId>org.codehaus.mojo</groupId>-->
+<!--                <artifactId>build-helper-maven-plugin</artifactId>-->
+<!--                <version>3.4.0</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>attach-submodule-artifact</id>-->
+<!--                        <phase>install</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>attach-artifact</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <artifacts>-->
+<!--                                <artifact>-->
+<!--                                    <file>${project.basedir}/maven-assembly/target/maven-assembly-1.0-0-SNAPSHOT.zip</file>-->
+<!--                                    <type>zip</type>-->
+<!--                                    <artifactId>${project.artifactId}</artifactId>-->
+<!--                                </artifact>-->
+<!--                            </artifacts>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 
